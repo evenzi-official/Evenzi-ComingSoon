@@ -1,3 +1,5 @@
+"use client";
+
 import { EvenziLogo } from "./EvenziLogo";
 import { smoothScrollTo } from "@/lib/smooth-scroll";
 
@@ -40,22 +42,17 @@ export function Hero() {
 
       {/* hero content — vertically centered, scales to viewport */}
       <div className="relative mx-auto flex w-full max-w-4xl flex-1 flex-col items-center justify-center px-6 py-8 text-center">
-        <span className="eyebrow animate-[fade-in_0.7s_ease-out_both]">
-          v1.0 — Coming Soon
-        </span>
+        <span className="eyebrow animate-[fade-in_0.7s_ease-out_both]">v1.0 — Coming Soon</span>
 
-        <h1
-          className="font-display mt-5 text-[clamp(2.5rem,11vw,6.5rem)] leading-[0.95] font-bold tracking-tight text-ink animate-[fade-in_0.9s_ease-out_0.1s_both]"
-        >
+        <h1 className="font-display mt-5 text-[clamp(2.5rem,11vw,6.5rem)] leading-[0.95] font-bold tracking-tight text-ink animate-[fade-in_0.9s_ease-out_0.1s_both]">
           Every moment,
           <br />
           <span className="text-gradient-red">beautifully kept.</span>
         </h1>
 
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-muted sm:mt-8 sm:text-lg md:text-xl animate-[fade-in_0.9s_ease-out_0.25s_both]">
-          Evenzi is the digital platform to capture, share and cherish your most
-          precious event memories — from weddings and birthdays to the moments
-          in between.
+          Evenzi is the digital platform to capture, share and cherish your most precious event
+          memories — from weddings and birthdays to the moments in between.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10 animate-[fade-in_0.9s_ease-out_0.4s_both]">

@@ -32,10 +32,7 @@ export function MarigoldGarland({ variant = "strand", className }: Props) {
           const t = i / 21;
           const x = t * 1200;
           // approximate y of cubic above
-          const y =
-            18 +
-            (1 - Math.pow(2 * t - 1, 2)) * 60 +
-            Math.sin(t * Math.PI * 4) * 1.5;
+          const y = 18 + (1 - Math.pow(2 * t - 1, 2)) * 60 + Math.sin(t * Math.PI * 4) * 1.5;
           const isRose = i % 5 === 0;
           const r = isRose ? 9 : 11;
           const fill = isRose ? "var(--color-rose)" : "var(--color-gold)";
@@ -170,14 +167,7 @@ export function MarigoldGarland({ variant = "strand", className }: Props) {
       aria-hidden="true"
       className={className}
     >
-      <line
-        x1="10"
-        y1="10"
-        x2="140"
-        y2="10"
-        stroke="var(--color-gold)"
-        strokeWidth="0.7"
-      />
+      <line x1="10" y1="10" x2="140" y2="10" stroke="var(--color-gold)" strokeWidth="0.7" />
       <line
         x1="10"
         y1="14"
@@ -187,14 +177,7 @@ export function MarigoldGarland({ variant = "strand", className }: Props) {
         strokeWidth="0.4"
         opacity="0.6"
       />
-      <line
-        x1="180"
-        y1="10"
-        x2="310"
-        y2="10"
-        stroke="var(--color-gold)"
-        strokeWidth="0.7"
-      />
+      <line x1="180" y1="10" x2="310" y2="10" stroke="var(--color-gold)" strokeWidth="0.7" />
       <line
         x1="180"
         y1="14"
@@ -208,16 +191,8 @@ export function MarigoldGarland({ variant = "strand", className }: Props) {
       <g transform="translate(160 12)">
         <circle r="6" fill="none" stroke="var(--color-gold)" strokeWidth="0.7" />
         <circle r="2.4" fill="var(--color-rose)" />
-        <path
-          d="M -14 0 L -8 -3 L -8 3 Z"
-          fill="var(--color-gold)"
-          opacity="0.85"
-        />
-        <path
-          d="M 14 0 L 8 -3 L 8 3 Z"
-          fill="var(--color-gold)"
-          opacity="0.85"
-        />
+        <path d="M -14 0 L -8 -3 L -8 3 Z" fill="var(--color-gold)" opacity="0.85" />
+        <path d="M 14 0 L 8 -3 L 8 3 Z" fill="var(--color-gold)" opacity="0.85" />
       </g>
     </svg>
   );

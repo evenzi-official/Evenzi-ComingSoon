@@ -30,9 +30,7 @@ export function SiteFooter() {
           ))}
         </ul>
 
-        <p className="text-xs tracking-wide text-ink-muted">
-          © {year} Evenzi · evenzii.com
-        </p>
+        <p className="text-xs tracking-wide text-ink-muted">© {year} Evenzi · evenzii.com</p>
       </div>
     </footer>
   );

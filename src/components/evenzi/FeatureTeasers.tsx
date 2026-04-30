@@ -1,3 +1,5 @@
+"use client";
+
 import { Camera, Share2, Heart, Calendar, Users, Image } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
 
@@ -63,10 +65,7 @@ export function FeatureTeasers() {
           </p>
         </div>
 
-        <ul
-          ref={grid.ref}
-          className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-3"
-        >
+        <ul ref={grid.ref} className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-3">
           {features.map((f, i) => {
             const Icon = f.icon;
             return (
@@ -89,12 +88,8 @@ export function FeatureTeasers() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-brand-red text-primary-foreground shadow-[0_10px_24px_-10px_oklch(0.598_0.235_26_/_0.6)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[-4deg]">
                   <Icon className="h-6 w-6" strokeWidth={2.2} />
                 </div>
-                <h3 className="font-display mt-7 text-2xl font-semibold text-ink">
-                  {f.title}
-                </h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
-                  {f.body}
-                </p>
+                <h3 className="font-display mt-7 text-2xl font-semibold text-ink">{f.title}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">{f.body}</p>
               </li>
             );
           })}

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, type FormEvent } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
@@ -92,9 +94,7 @@ export function Waitlist() {
             className="mx-auto mt-10 flex max-w-md flex-col items-center gap-3 rounded-2xl bg-white/10 px-8 py-8 backdrop-blur-sm"
           >
             <CheckCircle2 className="h-10 w-10 text-white" strokeWidth={2} />
-            <p className="font-display text-2xl font-semibold text-white">
-              You're on the list.
-            </p>
+            <p className="font-display text-2xl font-semibold text-white">You're on the list.</p>
             <p className="text-sm text-white/85">
               We'll be in touch the moment Evenzi opens its doors.
             </p>
@@ -145,18 +145,12 @@ export function Waitlist() {
         )}
 
         {error && (
-          <p
-            id="email-error"
-            role="alert"
-            className="mt-4 text-sm font-medium text-white"
-          >
+          <p id="email-error" role="alert" className="mt-4 text-sm font-medium text-white">
             {error}
           </p>
         )}
 
-        <p className="mt-6 text-xs text-white/70">
-          No spam, ever. Unsubscribe anytime.
-        </p>
+        <p className="mt-6 text-xs text-white/70">No spam, ever. Unsubscribe anytime.</p>
       </div>
     </section>
   );

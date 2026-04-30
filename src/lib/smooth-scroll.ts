@@ -5,10 +5,7 @@ import type { MouseEvent } from "react";
  * brief click ripple on the originating element. Falls back to native anchor
  * navigation if the target isn't found.
  */
-export function smoothScrollTo(
-  e: MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
-  hash: string,
-) {
+export function smoothScrollTo(e: MouseEvent<HTMLAnchorElement | HTMLButtonElement>, hash: string) {
   const id = hash.replace(/^#/, "");
   const target = typeof document !== "undefined" ? document.getElementById(id) : null;
 
@@ -41,8 +38,7 @@ export function smoothScrollTo(
   const startTime = performance.now();
 
   // easeInOutCubic
-  const ease = (t: number) =>
-    t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  const ease = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
   function step(now: number) {
     const elapsed = now - startTime;
