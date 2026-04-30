@@ -15,7 +15,7 @@ function Index() {
       <Hero />
       <FeatureTeasers />
       <Waitlist />
-      <SiteFooter />
+      <SiteFooter /> 
       <Toaster />
     </main>
   );
