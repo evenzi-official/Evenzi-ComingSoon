@@ -91,7 +91,7 @@
 }
 
 .dark {
-  --background: var(--ink);
+  --background: oklch(0.18 0.005 0);
   --foreground: oklch(0.98 0 0);
   --card: oklch(0.22 0.005 0);
   --card-foreground: oklch(0.98 0 0);
@@ -110,6 +110,13 @@
   --border: oklch(0.3 0 0);
   --input: oklch(0.3 0 0);
   --ring: var(--brand-red);
+
+  /* brand token overrides — power text-ink, text-ink-muted, bg-surface-alt, etc. */
+  --ink: oklch(0.95 0 0);
+  --ink-muted: oklch(0.7 0 0);
+  --surface: oklch(0.18 0.005 0);
+  --surface-alt: oklch(0.22 0.005 0);
+  --border-soft: oklch(0.3 0 0);
 }
 
 @layer base {
@@ -158,6 +165,38 @@
       linear-gradient(to bottom, oklch(0.92 0 0 / 0.7) 1px, transparent 1px);
     background-size: 64px 64px;
     mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%);
+  }
+  .dark .bg-grid-fade {
+    background-image:
+      linear-gradient(to right, oklch(0.28 0 0 / 0.6) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.28 0 0 / 0.6) 1px, transparent 1px);
+  }
+
+  .hero-wash {
+    background:
+      radial-gradient(60% 50% at 12% 25%, oklch(0.95 0.07 26 / 0.55), transparent 70%),
+      radial-gradient(55% 50% at 92% 80%, oklch(0.93 0.09 18 / 0.45), transparent 70%),
+      radial-gradient(40% 40% at 50% 110%, oklch(0.97 0.04 30 / 0.5), transparent 70%);
+  }
+  .dark .hero-wash {
+    background:
+      radial-gradient(60% 50% at 12% 25%, oklch(0.28 0.07 26 / 0.45), transparent 70%),
+      radial-gradient(55% 50% at 92% 80%, oklch(0.25 0.09 18 / 0.35), transparent 70%),
+      radial-gradient(40% 40% at 50% 110%, oklch(0.22 0.04 30 / 0.4), transparent 70%);
+  }
+
+  .features-section-wash {
+    background: radial-gradient(50% 100% at 50% 0%, oklch(0.97 0.04 26 / 0.6), transparent 70%);
+  }
+  .dark .features-section-wash {
+    background: radial-gradient(50% 100% at 50% 0%, oklch(0.22 0.04 26 / 0.4), transparent 70%);
+  }
+
+  .card-hover-wash {
+    background: radial-gradient(80% 60% at 50% 0%, oklch(0.97 0.04 26 / 0.7), transparent 70%);
+  }
+  .dark .card-hover-wash {
+    background: radial-gradient(80% 60% at 50% 0%, oklch(0.25 0.05 26 / 0.45), transparent 70%);
   }
 
   .text-gradient-red {

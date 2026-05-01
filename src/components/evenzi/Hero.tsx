@@ -1,6 +1,7 @@
 "use client";
 
 import { EvenziLogo } from "./EvenziLogo";
+import { ThemeToggle } from "./ThemeToggle";
 import { smoothScrollTo } from "@/lib/smooth-scroll";
 
 export function Hero() {
@@ -9,11 +10,7 @@ export function Hero() {
       {/* soft layered washes */}
       <div className="bg-grid-fade pointer-events-none absolute inset-0" aria-hidden="true" />
       <div
-        className="pointer-events-none absolute inset-0 opacity-80"
-        style={{
-          background:
-            "radial-gradient(60% 50% at 12% 25%, oklch(0.95 0.07 26 / 0.55), transparent 70%), radial-gradient(55% 50% at 92% 80%, oklch(0.93 0.09 18 / 0.45), transparent 70%), radial-gradient(40% 40% at 50% 110%, oklch(0.97 0.04 30 / 0.5), transparent 70%)",
-        }}
+        className="hero-wash pointer-events-none absolute inset-0 opacity-80"
         aria-hidden="true"
       />
 
@@ -31,13 +28,16 @@ export function Hero() {
       {/* top nav */}
       <nav className="relative mx-auto flex w-full max-w-6xl items-center justify-between px-6 pt-6 sm:pt-8">
         <EvenziLogo className="h-8 w-auto sm:h-9" showTagline={false} />
-        <span className="inline-flex items-center gap-2 rounded-full border border-border-soft bg-card/80 px-3 py-1.5 text-[11px] font-medium text-ink-muted backdrop-blur-sm sm:px-4 sm:text-xs">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full bg-brand-red" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-red" />
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <span className="inline-flex items-center gap-2 rounded-full border border-border-soft bg-card/80 px-3 py-1.5 text-[11px] font-medium text-ink-muted backdrop-blur-sm sm:px-4 sm:text-xs">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full bg-brand-red" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-red" />
+            </span>
+            Launching Soon
           </span>
-          Launching Soon
-        </span>
+        </div>
       </nav>
 
       {/* hero content — vertically centered, scales to viewport */}

@@ -4,7 +4,9 @@
       "Bash(grep -v '^$')",
       "Bash(npm install *)",
       "Bash(npx next *)",
-      "Bash(npx prettier *)"
+      "Bash(npx prettier *)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)"
     ]
   }
 }

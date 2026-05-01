@@ -40,11 +40,7 @@ export function FeatureTeasers() {
     >
       {/* soft section wash */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-96"
-        style={{
-          background:
-            "radial-gradient(50% 100% at 50% 0%, oklch(0.97 0.04 26 / 0.6), transparent 70%)",
-        }}
+        className="features-section-wash pointer-events-none absolute inset-x-0 top-0 -z-10 h-96"
         aria-hidden="true"
       />
 
@@ -75,11 +71,7 @@ export function FeatureTeasers() {
               >
                 {/* gradient hover wash */}
                 <div
-                  className="pointer-events-none absolute inset-0 -z-10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                  style={{
-                    background:
-                      "radial-gradient(80% 60% at 50% 0%, oklch(0.97 0.04 26 / 0.7), transparent 70%)",
-                  }}
+                  className="card-hover-wash pointer-events-none absolute inset-0 -z-10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                   aria-hidden="true"
                 />
                 <div className="absolute top-0 right-0 px-4 py-2 text-xs font-semibold tracking-wider text-ink-muted/60">

@@ -136,7 +136,7 @@ export function Waitlist() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-black disabled:opacity-60"
+              className="inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-black dark:bg-white/20 dark:hover:bg-white/30 disabled:opacity-60"
             >
               {status === "loading" ? "Joining…" : "Notify Me"}
               {status !== "loading" && <ArrowRight className="h-4 w-4" />}
