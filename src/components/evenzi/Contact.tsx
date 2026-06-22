@@ -41,8 +41,7 @@ export function Contact() {
           id="contact-heading"
           className="font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
         >
-          Have a question?{" "}
-          <span className="text-brand-red">Let&apos;s talk.</span>
+          Have a question? <span className="text-brand-red">Let&apos;s talk.</span>
         </h2>
 
         {/* Subtext */}
@@ -61,7 +60,10 @@ export function Contact() {
           href="mailto:evenzi.official@gmail.com"
           className="group inline-flex items-center gap-3 rounded-full bg-brand-red px-8 py-4 text-base font-semibold text-white shadow-[0_8px_32px_-8px_oklch(0.598_0.235_26_/_0.6)] transition-all duration-300 hover:bg-brand-red-hover hover:-translate-y-0.5 hover:shadow-[0_12px_40px_-8px_oklch(0.598_0.235_26_/_0.7)]"
         >
-          <Mail className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" strokeWidth={2} />
+          <Mail
+            className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
+            strokeWidth={2}
+          />
           evenzi.official@gmail.com
         </a>
 
