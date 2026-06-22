@@ -6,7 +6,16 @@
       "Bash(npx next *)",
       "Bash(npx prettier *)",
       "Bash(npx tsc *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\dheer\\\\evenzi-coming-soon-grand-reveal\\\\Evenzi-ComingSoon\" -Recurse -Force)",
+      "Bash(Select-Object -First 100)",
+      "Bash(Format-Table -Property FullName, Attributes -AutoSize)",
+      "Bash(dir C:\\\\Users\\\\dheer\\\\evenzi-coming-soon-grand-reveal\\\\Evenzi-ComingSoon\\\\src\\\\components\\\\evenzi *)",
+      "Bash(dir C:\\\\Users\\\\dheer\\\\evenzi-coming-soon-grand-reveal\\\\Evenzi-ComingSoon\\\\src *)",
+      "Bash(dir C:\\\\Users\\\\dheer\\\\evenzi-coming-soon-grand-reveal\\\\Evenzi-ComingSoon *)",
+      "Bash(dir C:\\\\Users\\\\dheer\\\\evenzi-coming-soon-grand-reveal\\\\Evenzi-ComingSoon\\\\app *)",
+      "Bash(dir C:\\\\Users\\\\dheer\\\\evenzi-coming-soon-grand-reveal\\\\Evenzi-ComingSoon\\\\docs *)",
+      "Bash(dir C:\\\\Users\\\\dheer\\\\evenzi-coming-soon-grand-reveal\\\\Evenzi-ComingSoon\\\\docs\\\\superpowers *)"
     ]
   }
 }

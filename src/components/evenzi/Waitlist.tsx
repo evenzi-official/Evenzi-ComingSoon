@@ -4,7 +4,6 @@ import { useState, type FormEvent } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import { useReveal } from "@/hooks/use-reveal";
 
 const emailSchema = z
@@ -37,15 +36,21 @@ export function Waitlist() {
     }
 
     setStatus("loading");
-    const { error: dbError } = await supabase
-      .from("waitlist_signups")
-      .insert({ email: parsed.data });
 
-    if (dbError) {
-      if (dbError.code === "23505") {
-        setStatus("success");
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: parsed.data }),
+      });
+
+      if (!res.ok) {
+        setStatus("idle");
+        setError("Something went wrong. Please try again in a moment.");
+        toast.error("We couldn't add you to the list. Please try again.");
         return;
       }
+    } catch {
       setStatus("idle");
       setError("Something went wrong. Please try again in a moment.");
       toast.error("We couldn't add you to the list. Please try again.");
