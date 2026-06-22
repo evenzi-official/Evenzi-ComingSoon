@@ -19,14 +19,14 @@ export function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="relative overflow-hidden bg-ink px-6 py-28 sm:py-36 dark:bg-[oklch(0.13_0.005_0)]"
+      className="relative overflow-hidden bg-surface px-6 py-28 sm:py-36"
     >
-      {/* Radial spotlight — adapts to theme */}
+      {/* Subtle radial glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0
-          bg-[radial-gradient(ellipse_55%_55%_at_50%_35%,oklch(0.28_0.005_0_/_0.9)_0%,transparent_70%)]
-          dark:bg-[radial-gradient(ellipse_55%_55%_at_50%_35%,oklch(0.24_0.008_0)_0%,oklch(0.10_0.005_0)_100%)]"
+          bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,oklch(0.96_0.015_26)_0%,transparent_70%)]
+          dark:bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,oklch(0.22_0.015_26_/_0.4)_0%,transparent_70%)]"
       />
 
       <div
@@ -39,13 +39,13 @@ export function Contact() {
         {/* Headline */}
         <h2
           id="contact-heading"
-          className="font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
+          className="font-display text-4xl font-bold leading-tight tracking-tight text-ink sm:text-5xl lg:text-6xl"
         >
           Have a question? <span className="text-brand-red">Let&apos;s talk.</span>
         </h2>
 
         {/* Subtext */}
-        <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-white/60 sm:text-lg">
+        <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-ink-muted sm:text-lg">
           Partnerships, press, feedback or just a hello — we&apos;d love to hear from you.
         </p>
       </div>
@@ -74,7 +74,7 @@ export function Contact() {
               <a
                 href={href}
                 aria-label={label}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/50 backdrop-blur-sm transition-all duration-300 hover:border-brand-red/60 hover:bg-brand-red/10 hover:text-brand-red"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border-soft bg-surface-alt text-ink-muted transition-all duration-300 hover:border-brand-red hover:text-brand-red"
               >
                 <Icon className="h-4 w-4" strokeWidth={2} />
               </a>
